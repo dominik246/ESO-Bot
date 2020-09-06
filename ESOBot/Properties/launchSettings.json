@@ -1,0 +1,10 @@
+{
+  "profiles": {
+    "ESOBot": {
+      "commandName": "Project",
+      "environmentVariables": {
+        "DiscordToken": "NzMwODQ0Njc0ODM5MDE5NTgz.Xwdacw.Nlpz6VslQBWoFIh32uu_Nqfrino"
+      }
+    }
+  }
+}
