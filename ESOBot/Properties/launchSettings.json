@@ -1,0 +1,9 @@
+{
+  "profiles": {
+    "ESOBot": {
+      "commandName": "Project",
+      "environmentVariables": {
+      }
+    }
+  }
+}
