@@ -24,7 +24,7 @@ namespace ESOBot
 
         public async Task MainAsync()
         {
-            new TcpListener(int.Parse(Environment.GetEnvironmentVariable("PORT")));
+            var tcp = new TcpClient("0.0.0.0", int.Parse(Environment.GetEnvironmentVariable("PORT")));
             var _config = new DiscordSocketConfig
             {
                 ExclusiveBulkDelete = true,
