@@ -46,7 +46,7 @@ namespace ESOBot
             }
             finally
             {
-                await Task.Delay(-1);
+                Console.ReadLine();
             }
         }
 
