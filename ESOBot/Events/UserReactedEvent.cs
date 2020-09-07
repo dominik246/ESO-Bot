@@ -4,9 +4,7 @@ using Discord.WebSocket;
 using ESOBot.Services;
 
 using System;
-using System.Collections.Generic;
 using System.Linq;
-using System.Text;
 using System.Threading.Tasks;
 
 namespace ESOBot.Events
@@ -23,7 +21,7 @@ namespace ESOBot.Events
         public async Task OnReaction(Cacheable<IUserMessage, ulong> msg, ISocketMessageChannel channel, SocketReaction reaction)
         {
             var entity = await msg.GetOrDownloadAsync();
-            if(!entity.Author.IsBot)
+            if (!entity.Author.IsBot)
                 return;
 
             if (!entity.Content.Contains("react", StringComparison.OrdinalIgnoreCase))
@@ -38,7 +36,7 @@ namespace ESOBot.Events
 
             if (_client.GetUser(userId).IsBot)
                 return;
-            
+
             try
             {
                 var test = reaction.User.Value as SocketGuildUser;

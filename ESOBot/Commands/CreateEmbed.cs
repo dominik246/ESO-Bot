@@ -4,7 +4,6 @@ using Discord.Commands;
 using ESOBot.Services;
 
 using System;
-using System.Collections.Generic;
 using System.IO;
 using System.Text;
 using System.Text.Json;
@@ -35,7 +34,7 @@ namespace ESOBot.Commands
                 await stream.DisposeAsync();
                 await Task.Run(() => json.Dispose());
             }
-            catch(Exception ex)
+            catch (Exception ex)
             {
                 await _log.Log(new LogMessage(LogSeverity.Error, "input", ex.Message, ex));
             }

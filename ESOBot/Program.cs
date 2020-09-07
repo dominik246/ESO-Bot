@@ -5,7 +5,6 @@ using Discord.WebSocket;
 using ESOBot.Events;
 using ESOBot.Services;
 
-using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.DependencyInjection;
 
 using System;

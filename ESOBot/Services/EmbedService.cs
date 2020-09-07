@@ -51,7 +51,7 @@ namespace ESOBot.Services
             EmbedAuthorBuilder builder = new EmbedAuthorBuilder();
             bool authorExists = jsonElement.TryGetProperty("author", out var author);
 
-            if(authorExists)
+            if (authorExists)
             {
                 bool nameExists = author.TryGetProperty("name", out var name);
                 bool urlExists = author.TryGetProperty("url", out var url);

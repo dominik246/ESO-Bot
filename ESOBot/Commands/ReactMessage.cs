@@ -1,14 +1,8 @@
 ﻿using Discord;
 using Discord.Commands;
-using Discord.WebSocket;
 
-using ESOBot.Events;
 using ESOBot.Services;
 
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
 using System.Threading.Tasks;
 
 namespace ESOBot.Commands

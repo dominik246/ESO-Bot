@@ -2,13 +2,10 @@
 using Discord.Commands;
 using Discord.WebSocket;
 
-using ESOBot.Commands;
 using ESOBot.Services;
 
 using System;
-using System.Collections.Generic;
 using System.Reflection;
-using System.Text;
 using System.Threading.Tasks;
 
 namespace ESOBot

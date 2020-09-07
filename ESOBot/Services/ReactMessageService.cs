@@ -1,6 +1,5 @@
 ﻿using Discord;
 using Discord.Commands;
-using Discord.WebSocket;
 
 using System;
 using System.Collections.Generic;
@@ -17,7 +16,7 @@ namespace ESOBot.Services
         {
             Emoji emote = new Emoji("✅");
             await message.AddReactionAsync(emote);
-            
+
             Stopwatch stopwatch = new Stopwatch();
             stopwatch.Start();
             var reactionCount = 0;
@@ -37,10 +36,10 @@ namespace ESOBot.Services
             var newMessage = await context.Channel.GetMessageAsync(message.Id);
 
             StringBuilder replyMsg = new StringBuilder($"React to give yourself a role.{Environment.NewLine}");
-            
+
             foreach (var reaction in newMessage.Reactions)
             {
-                if(reaction.Key.Name == "✅")
+                if (reaction.Key.Name == "✅")
                 {
                     continue;
                 }
