@@ -26,7 +26,6 @@ namespace ESOBot
         public async Task MainAsync()
         {
             var tcp = new TcpListener(new IPAddress(new byte[] { 0, 0, 0, 0 }), int.Parse(Environment.GetEnvironmentVariable("PORT")));
-            tcp.AllowNatTraversal(true);
             tcp.Start();
             var _config = new DiscordSocketConfig
             {
