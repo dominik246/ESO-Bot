@@ -2,8 +2,10 @@
   "profiles": {
     "ESOBot": {
       "commandName": "Project",
-      "environmentVariables": {
-      }
+      "environmentVariables": {}
+    },
+    "Docker": {
+      "commandName": "Docker"
     }
   }
 }

@@ -1,5 +1,7 @@
 ﻿using Discord;
 using Discord.Commands;
+using Discord.Net.Udp;
+using Discord.Net.WebSockets;
 using Discord.WebSocket;
 
 using ESOBot.Events;
@@ -8,6 +10,7 @@ using ESOBot.Services;
 using Microsoft.Extensions.DependencyInjection;
 
 using System;
+using System.Net.Sockets;
 using System.Threading.Tasks;
 
 namespace ESOBot
@@ -21,12 +24,15 @@ namespace ESOBot
 
         public async Task MainAsync()
         {
-            _client = new DiscordSocketClient(new DiscordSocketConfig
+            new TcpClient("localhost", int.Parse(Environment.GetEnvironmentVariable("PORT")));
+            var _config = new DiscordSocketConfig
             {
                 ExclusiveBulkDelete = true,
                 LogLevel = LogSeverity.Info,
-                MessageCacheSize = 10
-            });
+                MessageCacheSize = 10,
+            };
+
+            _client = new DiscordSocketClient(_config);
             var service = BuildServiceProvider();
 
             _client.Log += service.GetService<LogService>().Log;
@@ -46,7 +52,7 @@ namespace ESOBot
             }
             finally
             {
-                Console.ReadLine();
+                await Task.Delay(-1);
             }
         }
 
