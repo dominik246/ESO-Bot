@@ -3,6 +3,7 @@
     "ESOBot": {
       "commandName": "Project",
       "environmentVariables": {
+        "DiscordToken": "NzMwODQ0Njc0ODM5MDE5NTgz.XwdaJA.7q_YSG-hLwRPwVQh2ruk3RBAVIs"
       }
     }
   }
