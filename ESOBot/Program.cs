@@ -10,6 +10,7 @@ using ESOBot.Services;
 using Microsoft.Extensions.DependencyInjection;
 
 using System;
+using System.Net;
 using System.Net.Sockets;
 using System.Threading.Tasks;
 
@@ -24,7 +25,7 @@ namespace ESOBot
 
         public async Task MainAsync()
         {
-            var tcp = new TcpClient("0.0.0.0", int.Parse(Environment.GetEnvironmentVariable("PORT")));
+            var tcp = new TcpListener(new IPAddress(new byte[] { 0, 0, 0, 0 }), int.Parse(Environment.GetEnvironmentVariable("PORT")));
             var _config = new DiscordSocketConfig
             {
                 ExclusiveBulkDelete = true,
